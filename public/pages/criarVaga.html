@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Vaga</title>
+    <link rel="stylesheet" href="../css/criarVaga.css" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1>Conecta Vagas</h1>
+      <nav>
+        <a href="./vagas.html">Vagas</a>
+        <a href="./login.html">Sair</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="criar-vaga">
+        <h2>Criar Nova Vaga</h2>
+        <form id="formVaga">
+          <div class="campo">
+            <label for="titulo">Título da Vaga</label>
+            <input
+              type="text"
+              id="titulo"
+              placeholder="Ex: Desenvolvedor Front-End"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="descricao">Descrição</label>
+            <textarea
+              id="descricao"
+              rows="4"
+              placeholder="Descreva a vaga..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="campo">
+            <label for="localizacao">Localização</label>
+            <input
+              type="text"
+              id="localizacao"
+              placeholder="Ex: São Paulo, SP"
+              required
+            />
+          </div>
+
+          <button type="submit" id="btn-criar">Criar Vaga</button>
+        </form>
+      </section>
+
+      <section id="minhas-vagas">
+        <h2>Minhas Vagas</h2>
+        <div id="lista-vagas"></div>
+      </section>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2>Editar Vaga</h2>
+          <label>Título:</label>
+          <input type="text" id="modal-titulo" />
+
+          <label>Descrição:</label>
+          <textarea id="modal-descricao"></textarea>
+
+          <label>Localização:</label>
+          <input type="text" id="modal-localizacao" />
+
+          <div class="modal-buttons">
+            <button id="btn-salvar">Salvar</button>
+            <button id="btn-fechar" class="cancelar">Cancelar</button>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
+    <footer>
+      <p>© 2025 Conecta Vagas — Plataforma de oportunidades</p>
+    </footer>
+
+    <script src="../js/criarVaga.js"></script>
+  </body>
+</html>
